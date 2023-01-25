@@ -1,12 +1,11 @@
 BITS 64
 
 section .text
-    global my_strlen
+    global strlen
 
-my_strlen:
-    push rbp
-    mov rbp, rsp
+strlen:
     mov rax, 0
+
     cmp rdi, 0
     je end
 
@@ -18,5 +17,4 @@ boucle:
     jmp boucle
 
 end:
-    leave
     ret
